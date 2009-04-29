@@ -1,0 +1,25 @@
+= CustomFormHelpers
+
+"Custom Form Helpers" helps me write clean views by moving repetitive tags structure in a plugin.
+
+The generated html looks like that
+
+    <div class="field">
+        <div class="info">
+            <label for="field_name">Field Label</label>
+        </div>
+        <div class="input">
+            <input type="text" name="field_name" id="field_name"/>
+        </div>
+    </div>
+
+== Example of use
+
+    <%= f.custom_text_field :title, :label => 'Title' %>
+
+== Credits
+
+Author: {Denis Jacquemin}[http://github.com/denisj]
+Thanks to {David Demaree}[http://github.com/ddemaree] for inspiration
+
+Copyright (c) 2009 Denis Jacquemin, released under the MIT license
