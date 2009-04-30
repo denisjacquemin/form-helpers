@@ -1,8 +1,8 @@
-= CustomFormHelpers
+= Custom Form Helpers
 
 "Custom Form Helpers" helps me write clean views by moving repetitive tags structure in a plugin.
 
-The generated html looks like that
+The generated html looks like that:
 
     <div class="field">
         <div class="info">
@@ -19,7 +19,6 @@ The generated html looks like that
 
 == Credits
 
-Author: {Denis Jacquemin}[http://github.com/denisj]
-Thanks to {David Demaree}[http://github.com/ddemaree] for inspiration
+Author {Denis Jacquemin}[http://github.com/denisj] thanks to {David Demaree}[http://github.com/ddemaree] for inspiration.
 
 Copyright (c) 2009 Denis Jacquemin, released under the MIT license
