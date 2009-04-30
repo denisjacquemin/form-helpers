@@ -2,7 +2,7 @@ module DenisJ
   module CustomForm
     module FormHelper
 
-      def method_missing_with_label(method_name,*args)
+      def method_missing_with_custom(method_name,*args)
         if method_name.to_s =~ /^custom_/
           options    = args.extract_options!
           label_text = options.delete(:label)
@@ -11,7 +11,7 @@ module DenisJ
           object_name = args.shift
           method = args.shift
 
-          # build input field
+          # build input field by calling the rails methods
           field_html = send(method_name.to_s.sub(/^custom_/,""), object_name, method,*args)
 
           # build 'div input' containing the input field
@@ -26,7 +26,7 @@ module DenisJ
           # build 'div field' containing 'div info' and 'div input'
           content_tag('div', "#{info_html} #{input_html}", :class => "field")
         else
-          method_missing_without_label(method_name,*args)
+          method_missing_without_custom(method_name,*args)
         end
       end
 
